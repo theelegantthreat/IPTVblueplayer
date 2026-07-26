@@ -1,0 +1,6 @@
+{
+  "name": "IPTV Blue Player",
+  "description": "A feature-rich, high-performance IPTV Stream Player with M3U playlist importing, dynamic EPG support, and hardware-accelerated video decoding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

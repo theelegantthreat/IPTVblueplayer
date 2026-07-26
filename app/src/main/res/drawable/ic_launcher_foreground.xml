@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Left Antenna -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M35,18 L48,34 L44,37 L31,21 Z" />
+    <!-- Right Antenna -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M73,18 L60,34 L64,37 L77,21 Z" />
+    <!-- TV Outer Case -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M24,34h60a6,6 0 0 1 6,6v36a6,6 0 0 1 -6,6h-60a6,6 0 0 1 -6,-6v-36a6,6 0 0 1 6,-6z" />
+    <!-- TV Inner Screen (White gloss contrast) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,38h52a2,2 0 0 1 2,2v28a2,2 0 0 1 -2,2h-52a2,2 0 0 1 -2,-2v-28a2,2 0 0 1 2,-2z" />
+    <!-- Sleek Neon Play Triangle -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M48,46 L64,52 L48,58 Z" />
+</vector>
