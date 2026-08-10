@@ -3,6 +3,10 @@
 Thanks for your interest in contributing! By participating in this
 project you agree to abide by the guidelines below.
 
+Code of Conduct
+- Please read and follow the project's Code of Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+- All contributors are expected to adhere to the Code of Conduct; reports of unacceptable behavior will be handled as described there.
+
 Reporting issues
 - Search existing issues before opening a new one.
 - Provide a clear title and description, steps to reproduce, expected vs actual behavior, device/emulator details, Android API level, and any relevant logs.
