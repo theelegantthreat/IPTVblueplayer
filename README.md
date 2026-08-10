@@ -1,6 +1,10 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 # IPTVblueplayer
 
 A simple Android IPTV player written in Kotlin.
+
+Copyright (C) 2026 <theelegantthreat>
 
 Features
 - Play IPTV streams (M3U, HLS)
