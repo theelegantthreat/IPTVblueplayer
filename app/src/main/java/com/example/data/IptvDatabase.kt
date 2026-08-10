@@ -24,7 +24,7 @@ abstract class IptvDatabase : RoomDatabase() {
                     IptvDatabase::class.java,
                     "iptv_blue_player_db"
                 )
-                .fallbackToDestructiveMigration()
+                .fallbackToDestructiveMigration(dropAllTables = true)
                 .build()
                 INSTANCE = instance
                 instance

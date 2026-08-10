@@ -109,13 +109,14 @@ object IptvParser {
                     country = country.ifEmpty { "Unknown" },
                     language = language.ifEmpty { "Unknown" }
                 )
-            } else if (!trimmed.startsWith("#") && (trimmed.contains("://") || trimmed.startsWith("http") || trimmed.startsWith("rtsp"))) {
+            } else if (!trimmed.startsWith("#") && (trimmed.contains("://") || trimmed.startsWith("http") || trimmed.startsWith("rtsp") || trimmed.contains(".m3u8") || trimmed.contains(".ts") || trimmed.contains(".mpd") || trimmed.contains(".mp4"))) {
                 val info = currentInfo ?: PendingChannelInfo(
                     name = trimmed.substringAfterLast("/").substringBefore("?").ifEmpty { "Unnamed Stream" }
                 )
+                val finalName = info.name.ifEmpty { trimmed.substringAfterLast("/").substringBefore("?").ifEmpty { "Unnamed Stream" } }
                 channels.add(
                     ChannelEntity(
-                        name = info.name,
+                        name = finalName,
                         url = trimmed,
                         logoUrl = info.logoUrl,
                         category = info.category,
@@ -163,8 +164,8 @@ object IptvParser {
                 val tzMatch = Pattern.compile("([+-])(\\d{2})(\\d{2})").matcher(dateStr)
                 if (tzMatch.find()) {
                     val sign = tzMatch.group(1)
-                    val hours = tzMatch.group(2).toInt()
-                    val mins = tzMatch.group(3).toInt()
+                    val hours = tzMatch.group(2)?.toIntOrNull() ?: 0
+                    val mins = tzMatch.group(3)?.toIntOrNull() ?: 0
                     val offsetMillis = (hours * 3600 + mins * 60) * 1000L
                     val time = cal.timeInMillis
                     return if (sign == "+") time - offsetMillis else time + offsetMillis

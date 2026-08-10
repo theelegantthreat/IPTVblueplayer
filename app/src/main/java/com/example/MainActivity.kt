@@ -26,6 +26,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -698,7 +699,7 @@ fun TabsRow(
     onTabSelected: (Int) -> Unit
 ) {
     val tabs = listOf(
-        Icons.Default.FormatListBulleted to "Channels",
+        Icons.AutoMirrored.Filled.FormatListBulleted to "Channels",
         Icons.Default.Schedule to "EPG Guide",
         Icons.Default.BarChart to "Tools & Scan"
     )
@@ -1199,7 +1200,7 @@ fun EpgGuidePane(
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 11.sp
                                     )
-                                    Divider(
+                                    VerticalDivider(
                                         modifier = Modifier
                                             .fillMaxHeight()
                                             .width(1.dp)
@@ -1531,11 +1532,11 @@ fun StatsAndScannerPane(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 StatRow("Total Feeds Loaded", totalChannels.toString(), BluePrimary)
-                Divider(color = GlassBorder)
+                HorizontalDivider(color = GlassBorder)
                 StatRow("Verified Reachable (Live)", liveCount.toString(), LiveGreen)
-                Divider(color = GlassBorder)
+                HorizontalDivider(color = GlassBorder)
                 StatRow("Reachable Failures (Dead)", deadCount.toString(), DeadRed)
-                Divider(color = GlassBorder)
+                HorizontalDivider(color = GlassBorder)
                 StatRow("Unverified Feeds", unknownCount.toString(), PendingYellow)
             }
         }
@@ -1757,7 +1758,7 @@ fun StreamDetailsPane(
             Text(channel.language, color = TextSecondary, fontSize = 11.sp)
         }
 
-        Divider(color = GlassBorder, modifier = Modifier.padding(vertical = 16.dp))
+        HorizontalDivider(color = GlassBorder, modifier = Modifier.padding(vertical = 16.dp))
 
         // On Air indicator
         Text("On Air Right Now", fontWeight = FontWeight.SemiBold, fontSize = 12.sp, color = BluePrimary)
@@ -2055,7 +2056,7 @@ fun PlaylistPreviewSection(
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(onClick = onBack) {
-                Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Back", tint = TextPrimary)
+                Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = TextPrimary)
             }
             Text(
                 text = "Preview Playlist (${parsedItems.size} items)",
@@ -2270,7 +2271,7 @@ fun ManagementDialog(
                         }
                     }
 
-                    Divider(color = GlassBorder)
+                    HorizontalDivider(color = GlassBorder)
 
                     // Smart Deduplication Switch
                     Row(

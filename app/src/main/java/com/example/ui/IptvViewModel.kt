@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.data.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -16,6 +17,7 @@ data class ScanResults(
     val dead: Int = 0
 )
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class IptvViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: IptvRepository
