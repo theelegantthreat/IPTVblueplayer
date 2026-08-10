@@ -6,6 +6,8 @@ A simple Android IPTV player written in Kotlin.
 
 Copyright (C) 2026 <theelegantthreat>
 
+Please read our Code of Conduct before contributing: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
 Features
 - Play IPTV streams (M3U, HLS)
 - Simple, lightweight UI
